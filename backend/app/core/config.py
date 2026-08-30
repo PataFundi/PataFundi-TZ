@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     SECRET_KEY:str
     ALGORITHM:str
     APP_NAME:str
-    EXPIRE_ACCESS_TOKEN:int
+    EXPIRE_ACCESS_TOKEN:int=1440
     
     model_config=SettingsConfigDict(
         env_file=".env",
