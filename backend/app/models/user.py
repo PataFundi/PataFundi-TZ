@@ -22,3 +22,4 @@ class User(Base):
     updated_at=Column(DateTime,default=datetime.now(),onupdate=datetime.now())
     
     refreshtoken=relationship("RefreshToken",back_populates="user")
+    customer=relationship("Customer",back_populates="user")
